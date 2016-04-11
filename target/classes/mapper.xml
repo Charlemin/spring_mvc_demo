@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cn.hnust.dao.IUserDao" >
+    <resultMap id="BaseResultMap" type="com.cn.hnust.pojo.Gdline" >
+        <id column="line_name" property="Line_name" jdbcType="VARCHAR" />
+        <result column="stop_cnt" property="Stop_cnt" jdbcType="VARCHAR" />
+        <result column="line_type" property="Line_type" jdbcType="VARCHAR" />
+    </resultMap>
+    <sql id="Base_Column_List" >
+        Line_name, Stop_cnt, Line_type
+    </sql>
+    <select id="selectByPrimaryKey" parameterType="string" resultMap="BaseResultMap">
+        select <include refid="Base_Column_List" /> from gd_line where Stop_cnt=#{str}
+    </select>
+</mapper>

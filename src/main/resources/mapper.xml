@@ -10,6 +10,6 @@
         Line_name, Stop_cnt, Line_type
     </sql>
     <select id="selectByPrimaryKey" parameterType="string" resultMap="BaseResultMap">
-        select <include refid="Base_Column_List" /> from gd_line where Stop_cnt=#{str}
+        select <include refid="Base_Column_List" /> from line_desc where Stop_cnt=#{str}
     </select>
 </mapper>

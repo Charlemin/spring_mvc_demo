@@ -15,6 +15,7 @@ public class UserServiceImpl implements IUserService {
 
     public Gdline getLineinfoById(String str) {
         // TODO Auto-generated method stub
-        return this.userDao.selectByPrimaryKey(str);
+        System.out.println("vfsg");
+        return userDao.selectByPrimaryKey(str);
     }
 }

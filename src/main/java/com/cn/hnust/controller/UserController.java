@@ -21,8 +21,8 @@ public class UserController {
 
     @RequestMapping("/index.jsp")
     public String toIndex(HttpServletRequest request,Model model){
-       String line_name = request.getParameter("line_name");
-       Gdline gdline = this.userService.getLineinfoById(line_name);
+        String line_name = request.getParameter("line_name");
+        Gdline gdline = this.userService.getLineinfoById(line_name);
         model.addAttribute("gd_line", gdline);
-      return "showUser";  }
+        return "showUser";  }
 }

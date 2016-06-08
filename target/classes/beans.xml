@@ -4,5 +4,38 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-<bean id="userbean" class="com.cn.hnust.service.impl.UserBean"></bean>
+       <bean id="userbean" class="com.cn.hnust.service.impl.UserBean"></bean>
+       <!--<bean id="person" class="com.cn.hnust.BeanFactory.Person">-->
+              <!--<property name="test" value="孙悟空"></property>-->
+       <!--</bean>-->
+       <bean class="com.cn.hnust.ApplicationContextEvent.EmailListener"></bean>
+       <bean id="ioc_collection" class="com.cn.hnust.BeanFactory.IOC_Collecton">
+              <property name="schools">
+                     <list>
+                            <value>小学</value>
+                            <value>中学</value>
+                            <value>大学</value>
+                     </list>
+              </property>
+              <property name="scores">
+                     <map>
+                            <entry key="数学" value="87"></entry>
+                            <entry key="英语" value="89"></entry>
+                            <entry key="语文" value="81"></entry>
+                     </map>
+              </property>
+              <property name="health">
+                     <props>
+                            <prop key="血压">正常</prop>
+                            <prop key="身高">175</prop>
+                     </props>
+              </property>
+              <property name="books">
+                     <list>
+                            <value>英语</value>
+                            <value>语文</value>
+                            <value>数学</value>
+                     </list>
+              </property>
+       </bean>
 </beans>
